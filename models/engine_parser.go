@@ -19,7 +19,7 @@ type EngineParser struct {
 	Data []RSEDataPoint
 }
 
-func NewEngineParser(filename string) EngineParser {
+func NewEngineParser(filename string) Parser {
     var p EngineParser
     p.FileName = filename
 	p.Processor = new_parser(filename)

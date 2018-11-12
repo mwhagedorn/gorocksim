@@ -7,7 +7,7 @@ type WraspParser struct {
 	Context EngineParser
 }
 
-func (w WraspParser) parse(filename string) Parser{
+func (w WraspParser) Parse(filename string) Parser{
 	fmt.Printf("parse()\n")
 	return w.Context
 }

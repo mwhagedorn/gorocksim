@@ -87,7 +87,7 @@ type RSEDataPoint struct {
 //  </engine-list>
 // </engine-database>
 
-func (r RSEParser) parse(filename string) *Parser{
+func (r RSEParser) Parse(filename string) Parser{
 	var home string = os.Getenv("HOME")
 	var engines string = home+"/.gorocksim/engines/"+filename
 	if _, err := os.Stat(engines); os.IsNotExist(err) {
@@ -118,7 +118,7 @@ func (r RSEParser) parse(filename string) *Parser{
 	r.Context.BurnTime = the_engine.BurnTime
 	r.Context.Data = the_engine.Data
     
-	return &r.Context
+	return r.Context
 }
 
 func (r RSEParser) setContext(parent EngineParser)  {

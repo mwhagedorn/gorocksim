@@ -1,5 +1,5 @@
 package models
 
 type Parser interface {
-	parse(filename string) *Parser
+	Parse(filename string) EngineData
 }
